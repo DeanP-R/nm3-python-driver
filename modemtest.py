@@ -14,9 +14,6 @@ right_modem = NM3(serial_port=serial_port_2)
 left_modem.set_address(1)
 right_modem.set_address(2)
 
-# Your code to interact with the modems
-# ...
-
 # Close the serial ports
 serial_port_1.close()
 serial_port_2.close()
