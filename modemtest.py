@@ -3,7 +3,7 @@ from nm3driver import Nm3, Nm3ResponseParser
 import serial
 
 # Initialize the modems
-serial_port_1 = serial.Serial('/dev/ttyUSB0', 9600, 8, serial.PARITY_NONE, serial.STOPBITS_ONE, 0.1)
+serial_port_1 = serial.Serial('COM7', 9600, 8, serial.PARITY_NONE, serial.STOPBITS_ONE, 0.1)
 left_modem = Nm3(input_stream=serial_port_1, output_stream=serial_port_1)
 
 #serial_port_2 = serial.Serial('/dev/ttyUSB1', 9600, 8, serial.PARITY_NONE, serial.STOPBITS_ONE, 0.1)
@@ -63,5 +63,5 @@ def get_address(self) -> int:
     
 print("Left Modem ", left_modem.get_address())
 # print("Right Modem ", right_modem.get_address())
-set_modem_address(left_modem, 123)
+set_modem_address(left_modem, 255)
 # set_modem_address(right_modem, 246)
