@@ -468,12 +468,12 @@ def main():
 
     ## Create the Modem
     # Serial Port is opened with a 100ms timeout for reading.
-    serial_port = serial.Serial('COM8', 9600, 8, serial.PARITY_NONE, serial.STOPBITS_ONE, 0.1)
+    serial_port = serial.Serial('/dev/ttyUSB0', 9600, 8, serial.PARITY_NONE, serial.STOPBITS_ONE, 0.1)
     nm3_modem = Nm3(input_stream=serial_port, output_stream=serial_port)
 
 
     ## Parameters used for the examples
-    local_address = 255
+    local_address = 153
     remote_address = 122
     message = b'Hello'
 
